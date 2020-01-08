@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.min.css" type=text/css>
+  <title>JavaScript課題1 よくある機能5本ノック</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="header__title">JavaScript課題1</h1>
+      <button id="js-drawer-trigger" class="button">ドロワーを開く</button>
+    </div>
+    <section>
+      <h2 class="section-title">タブメニュー</h2>
+      <div class="tab js-tab">
+        <ul class="tab-menu">
+          <li class="tab-menu__item js-tab-menu-item"><a href="javascript:void(0);">カテゴリから探す</a></li>
+          <li class="tab-menu__item js-tab-menu-item"><a href="javascript:void(0);">ブランドから探す</a></li>
+        </ul>
+        <div class="tab-body">
+          <div class="tab-body__detail js-tab-body-detail">カテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリカテゴリ</div>
+          <div class="tab-body__detail js-tab-body-detail">ブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランドブランド</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title">アコーディオンメニュー</h2>
+      <dl class="accordion js-accordion">
+        <dt class="accordion__title js-accordion-trigger">アコーディオン1</dt>
+        <dd class="accordion__detail js-accordion-target">
+          <p class="accordion__text">コンテンツ1</p>
+          <p class="accordion__text">コンテンツ2</p>
+          <p class="accordion__text">コンテンツ3</p>
+        </dd>
+        <dt class="accordion__title js-accordion-trigger">アコーディオン2</dt>
+        <dd class="accordion__detail js-accordion-target">
+          <p class="accordion__text">コンテンツ1</p>
+          <p class="accordion__text">コンテンツ2</p>
+          <p class="accordion__text">コンテンツ3</p>
+          <p class="accordion__text">コンテンツ4</p>
+          <p class="accordion__text">コンテンツ5</p>
+          <p class="accordion__text">コンテンツ6</p>
+        </dd>
+        <dt class="accordion__title js-accordion-trigger">アコーディオン3</dt>
+        <dd class="accordion__detail js-accordion-target">
+          <p class="accordion__text">コンテンツ1</p>
+        </dd>
+      </dl>
+    </section>
+    <section>
+      <h2 class="section-title">スライダー</h2>
+      <div class="slider">
+        <ul id="js-slide-list" class="slider__list">
+          <li class="slider__item js-slider-item"><img src="./images/default.jpg" alt="サンプル画像"></li>
+          <li class="slider__item js-slider-item"><img src="./images/image01.jpg" alt="サンプル画像"></li>
+          <li class="slider__item js-slider-item"><img src="./images/default.jpg" alt="サンプル画像"></li>
+          <li class="slider__item js-slider-item"><img src="./images/image01.jpg" alt="サンプル画像"></li>
+          <li class="slider__item js-slider-item"><img src="./images/default.jpg" alt="サンプル画像"></li>
+          <li class="slider__item js-slider-item"><img src="./images/image01.jpg" alt="サンプル画像"></li>
+        </ul>
+      </div>
+      <div class="slider__button">
+        <button id="js-slider-prev" class="button slider-button -prev">back</button>
+        <button id="js-slider-next" class="button slider-button -next">next</button>
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title">スライダー（ループver）</h2>
+      <div class="loop-slide">
+        <ul id="js-loop-slide-list" class="loop-slide__list">
+          <li class="loop-slide__item js-loop-slide-item"><img src="./images/default.jpg" alt="サンプル画像"></li>
+          <li class="loop-slide__item js-loop-slide-item"><img src="./images/image01.jpg" alt="サンプル画像"></li>
+          <li class="loop-slide__item js-loop-slide-item"><img src="./images/default.jpg" alt="サンプル画像"></li>
+          <li class="loop-slide__item js-loop-slide-item"><img src="./images/image01.jpg" alt="サンプル画像"></li>
+          <li class="loop-slide__item js-loop-slide-item"><img src="./images/default.jpg" alt="サンプル画像"></li>
+          <li class="loop-slide__item js-loop-slide-item"><img src="./images/image01.jpg" alt="サンプル画像"></li>
+        </ul>
+      </div>
+      <div class="slider__button">
+        <button id="js-loop-slide-prev" class="button slider-button -prev">back</button>
+        <button id="js-loop-slide-next" class="button slider-button -next">next</button>
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title">モーダル</h2>
+      <button id="js-modal-trigger" class="button">モーダルを開く</button>
+    </section>
+  </div>
+  <div id="js-modal" class="modal">
+    <div class="filter"></div>
+    <div class="modal__inner">
+      <img src="./images/default.jpg" alt="サンプル画像" class="modal__image">
+      <div class="modal__button">
+        <button id="js-modal-close" class="button">モーダルを閉じる</button>
+      </div>
+    </div>
+  </div>
+  <div id="js-drawer" class="drawer">
+    <div class="filter"></div>
+    <div id="js-drawer-inner" class="drawer__inner">
+      <button id="js-drawer-close" class="drawer__close">×</button>
+      <ul>
+        <li class="drawer__item">サンプル</li>
+        <li class="drawer__item">サンプル</li>
+        <li class="drawer__item">サンプル</li>
+        <li class="drawer__item">サンプル</li>
+        <li class="drawer__item">サンプル</li>
+        <li class="drawer__item">サンプル</li>
+        <li class="drawer__item">サンプル</li>
+      </ul>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
